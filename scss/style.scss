@@ -1,0 +1,407 @@
+@import "fonts";
+@import "colors";
+@import "global";
+
+.header-banner{
+  @include wh(100%, fit-content);
+  background: url("../img/header-bg3.jpg") no-repeat center;
+  background-size: cover;
+  .header {
+    @include wh(100%, fit-content);
+    margin: 0 auto;
+    @extend %flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    &-logo{
+      @extend %flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-basis: 505px;
+      color: $white;
+      text-transform: uppercase;
+      &__img {
+        @include wh(83px, 83px);
+      }
+      &__title {
+        font: 41.05px $lsansi;
+        cursor: pointer;
+        &:hover{
+          color: #F5C506;
+        }
+      }
+      &__subtitle {
+        font: 13.05px $laoUI;
+        margin-top: 30px;
+      }
+    }
+    .menu-wr{
+      margin-top: 30px;
+      flex-basis: 500px;
+      .before-menu1{
+        position: relative;
+        background-color: #7D6F20;
+        @include wh(450px, 40px);
+        z-index: 2;
+      }
+      .before-menu2{
+        @include position(relative, -36px, 4px);
+        background-color: #988312;
+        @include wh(450px, 44px);
+        z-index: 3;
+      }
+      .main-nav{
+        @include position(relative, -75px, 8px);
+        background-color: #F5C506;
+        @include wh(450px, 44px);
+        z-index: 4;
+        @extend %flex;
+        justify-content: space-between;
+        &-items{
+          flex-basis: 147px;
+          height: 100%;
+          border-left: 1px solid #A9A9A9;
+          &:first-of-type{
+            border-left: none;
+          }
+          &__img{
+            display: inline-block;
+            margin-left: 10px;
+          }
+          &__link{
+            display: inline-block;
+            width: 87px;
+            margin-left: 10px;
+            margin-top: 9%;
+            font: 17.05px $segoeUI;
+            color: #9b7d08;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            &:hover{
+              color: $red2;
+            }
+          }
+        }
+      }
+    }
+  }
+  .slider {
+    &-top {
+      width: 84%;
+      height: fit-content;
+      margin: 0 60px;
+      &__img {
+        @include wh(558px, 336px);
+        outline: none;
+      }
+    }
+    &-text {
+      @include wh(453px, fit-content);
+      margin-left: 60px;
+      margin-top: 59px;
+      @include text(center, uppercase);
+      font: 63.05px $asapr;
+      outline: none;
+      &__title {
+        color: #f5c506;
+        height: fit-content;
+        margin: 0;
+        padding: 0;
+      }
+      &__subtitle{
+        color: $white;
+        height: fit-content;
+        margin: 0;
+      }
+      &:hover{
+        border: none;
+      }
+    }
+  }
+  .slick-prev, .slick-next{
+    @include wh(32px, 57px);
+  }
+  .slick-prev {
+    left: -5.5%;
+  }
+  .slick-next {
+    top: 51%;
+    right: -13.2%;
+  }
+}
+.features{
+  position: relative;
+  z-index: 3;
+  @include wh(100%, fit-content);
+  background: url("../img/features-bg.png") no-repeat;
+  -webkit-box-shadow: 0px 12px 5px 0px rgba(0,0,0,0.62);
+  -moz-box-shadow: 0px 12px 5px 0px rgba(0,0,0,0.62);
+  box-shadow: 0px 12px 5px 0px rgba(0,0,0,0.62);
+  &-list{
+    width: 80%;
+    margin: 0 auto;
+    list-style-type: none;
+    @extend %flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  &-item{
+       flex-basis: 30%;
+       height: 209px;
+       border-right: 1px solid #D6D6D6;
+       @extend %flex;
+       flex-direction: column;
+       justify-content: flex-end;
+       align-items: center;
+       transition: all 0.3s ease;
+       &:first-of-type{
+         border-left: 1px solid #D6D6D6;
+       }
+       &__img{
+        outline: none;
+       }
+       &__title{
+         font: 27.05px $segoeUI;
+         @include text(center, uppercase);
+       }
+       &:hover{
+         background-color: #ffa500;
+         border-color: #ffa500;
+         cursor: pointer;
+       }
+  }
+}
+.middle-wr{
+  position: relative;
+  z-index: 1;
+  top: -30px;
+  @include wh(100%, 506px);
+  background: url("../img/middle_bg.png") no-repeat;
+  background-size: cover;
+  &-cont {
+    width: 90%;
+    margin: 0 auto;
+  }
+  &__title {
+      padding-top: 20px;
+      width: 90%;
+      margin-left: auto;
+      font: 37.05px $ptsans;
+      color: $white;
+  }
+   &-list {
+      @extend %flex;
+      justify-content: center;
+      width: 100%;
+      padding: 0;
+      list-style-type: none;
+    }
+    &-text {
+      flex-basis: 320px;
+      height: 232px;
+      background-color: #EC9E03;
+      padding-left: 14px;
+      &__caption {
+        font: 29.05px $segoeUI;
+        color: $white;
+      }
+      .plusBtn {
+        @extend %plusBtn;
+        top: -18%;
+        left: 94%;
+      }
+    }
+    &-animation{
+      &-img{
+        @include wh(315px, 232px);
+      }
+    }
+    &-social {
+       margin-left: 30px;
+       height: 190px;      
+      .plusBtn {
+        @extend %plusBtn;
+        top: -37px;
+        right: -95%;
+      }
+      .messages {
+        display: none;
+        margin-left: 20px;
+        .twitter-msg {
+          display: none;
+          @include wh(196px, 26px);
+          margin-bottom: 10px;
+          border-radius: 50px 0 0 50px;
+          padding: 2px;
+          outline: none;
+        }
+        .twitter-btn {
+          display: none;
+          @include wh(60px, 28px);
+          border-radius: 0 50px 50px 0;
+          padding: 5px;
+          background-color: #E3A220;
+          font: 15.05px "Arial";
+          color: $white;
+          cursor: pointer;
+          outline: none;
+        }
+        .old-msg {
+          display: none;
+          @include wh(196px, 42px);
+          border-radius: 40px 10px;
+          padding: 2px;
+          font: 13.05px "Arial";
+          text-align: center;
+          color: #8f8e8e;
+          background-color: #FBE89C;
+        }
+      }
+    }
+    .date-wr {
+      position: absolute;
+      background-color: #DDB101;
+      @include wh(112px, 94px);
+      margin-top: -20px;
+      margin-left: 128px;
+      @include text(center, uppercase);
+      font-family: $segoeUI;
+      .date {
+        margin-top: -7px;
+        font-size: 51.05px;
+        color: $white;
+        font-weight: bold;
+      }
+      .month {
+        font-size: 21.05px;
+        color: #b26529;
+        margin-top: -51%;
+      }
+    }
+  .slider-range{
+    @include wh(874px, 12px);
+    margin: 119px auto;
+    background-color: #FAE592;
+    border-radius: 25px;
+    .slider-span{
+      position: relative;
+      display: block;
+      @include wh(187px, 12px);
+      border-radius: 25px;
+      background-color: #EC9E03;
+      left: 25%;
+    }
+  }
+}
+.services{ 
+  margin-top: -66px;
+  z-index: 1;
+  @include wh(100%, 458px);
+  background: url("../img/sevices-bg.jpg") repeat;  
+  &__title{
+    width: 100%;
+    padding-top: 12px;
+    font: 43.05px $ptsans;
+    color: #f5c506;
+    @include text(center, uppercase);
+  }
+  &-views{
+    display: inline-block;
+    width: fit-content;
+    margin-top: 10px;
+    &-logo {
+      display: inline-block;
+      @include position(relative, -200px, 117px);
+      @include wh(131px, 129px);
+      background-color: #F5C506;
+      border-radius: 141px;
+      .logo-text {
+         font: 18.74px $ptsansb;
+         color: $white;
+         @include text(center, uppercase);
+         padding-top: 43px;
+      }
+    }
+    &-img{
+      display: inline-block;
+      margin-right: 22px;
+    }
+  }
+  &-list{
+    display: inline-block;
+    @include position(relative, -7px, 90px);
+    list-style-type: none;
+    list-style-image: url("../img/list-item.png");
+    &-items{
+      font: 22px $ptsans;
+      color: #a9a9a7;
+      width: 370px;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.footer {
+  position: relative;
+  z-index: 3;
+  top: -2px; 
+  width: 100%;
+  background-color: #4C4C4C;
+  -webkit-box-shadow: -1px -23px 29px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px -23px 29px -1px rgba(0,0,0,0.75);
+  box-shadow: -1px -23px 29px -1px rgba(0,0,0,0.75);
+  @extend %flex;
+  justify-content: space-around;
+  align-items: center;
+  &-logo{
+    @extend %flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 222px;
+    &__img{
+      @include wh(54px, 54px);
+    }
+    &__title{
+      font: 29.05px $lsansi;
+      color: $white;
+      cursor: pointer;
+      @include text(none, uppercase);
+      &:hover{
+        color: #F5C506;
+      }
+    }
+  }
+  &-copyright{
+    font: 17.05px $laoUI;
+    color: $white;
+  }
+}
+.dialog{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0, 0.5);
+  display: none;
+  z-index: 1000;
+  &-body {
+    width: 400px;
+    height: 200px;
+    background-color: #EC9E03;
+    margin: 100px auto;
+    padding: 5px;
+    z-index: 2000;
+    font: 29.05px $segoeUI;
+    color: $white;
+  }
+}
+.active:after,
+.active:before{
+  clear: both;
+  display: table;
+  content:"";
+}
+@import "media";

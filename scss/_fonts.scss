@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "LucidaSans Italic";
+  src: url(../fonts/LSANSI.TTF);
+}
+@font-face {
+  font-family: "Lao UI";
+  src: url(../fonts/LaoUI.ttf);
+}
+/*@font-face {
+  font-family: "Segoe UI";
+  src: url(../fonts/segoe-ui.ttf);
+}*/
+@font-face {
+  font-family: 'Asap Regular';
+  src: url(../fonts/Asap-Regular.ttf);
+}
+@font-face {
+  font-family: 'PT Sans Regular';
+  src: url("../fonts/PT_Sans-Web-Regular.ttf");
+}
+@font-face {
+  font-family: 'PT Sans Bold';
+  src: url("../fonts/PT_Sans-Web-Bold.ttf");
+}
+$lsansi: 'LucidaSans Italic';
+$laoUI: 'Lao UI';
+$segoeUI: 'Segoe UI';
+$asapr: 'Asap Regular';
+$ptsans: 'PT Sans Regular';
+$ptsansb: 'PT Sans Bold';
